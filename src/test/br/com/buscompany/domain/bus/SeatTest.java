@@ -1,4 +1,4 @@
-package test.domain.bus;
+package test.br.com.buscompany.domain.bus;
 
 import main.br.com.buscompany.domain.bus.Seat;
 import main.br.com.buscompany.domain.ticket.Ticket;
