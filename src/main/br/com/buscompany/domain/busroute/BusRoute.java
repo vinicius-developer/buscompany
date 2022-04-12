@@ -23,14 +23,14 @@ public class BusRoute {
     private void verifyIfStopExistInRoute(BusStop busStop) {
         for (BusStop currentBusStop: this.route) {
             if(currentBusStop.equals(busStop)) {
-                throw new InvalidParameterException("Para já existe nessa rota");
+                throw new InvalidParameterException("Parada ja existe nessa rota");
             }
         }
     }
 
     private void verifyBusStopIsNotNull(BusStop busStop) {
         if(busStop == null) {
-            throw new InvalidParameterException("a Parada de onibus nao pode ser igual a null");
+            throw new InvalidParameterException("A parada de onibus nao pode ser igual a null");
         }
     }
 
