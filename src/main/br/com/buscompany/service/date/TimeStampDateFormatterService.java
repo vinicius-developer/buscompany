@@ -17,7 +17,7 @@ public class TimeStampDateFormatterService implements DateFormater {
             this.date = new SimpleDateFormat(this.TIME_STAMP_DEFAULT)
                     .parse(date);
         } catch (ParseException parseException) {
-            throw new InvalidParameterException("A data fornecida nao esta do padrao timestamp");
+            throw new InvalidParameterException("A data fornecida nao esta no padrao timestamp");
         }
     }
 
