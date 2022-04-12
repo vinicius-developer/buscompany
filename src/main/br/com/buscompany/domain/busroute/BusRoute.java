@@ -13,7 +13,25 @@ public class BusRoute {
     private Integer nextBusStop = 0;
 
     public void addStop(BusStop busStop) {
+        this.verifyBusStopIsNotNull(busStop);
+
+        this.verifyIfStopExistInRoute(busStop);
+
         this.route.add(busStop);
+    }
+
+    private void verifyIfStopExistInRoute(BusStop busStop) {
+        for (BusStop currentBusStop: this.route) {
+            if(currentBusStop.equals(busStop)) {
+                throw new InvalidParameterException("Para já existe nessa rota");
+            }
+        }
+    }
+
+    private void verifyBusStopIsNotNull(BusStop busStop) {
+        if(busStop == null) {
+            throw new InvalidParameterException("a Parada de onibus nao pode ser igual a null");
+        }
     }
 
     public List<BusStop> showRoute() {
