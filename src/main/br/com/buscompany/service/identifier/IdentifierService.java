@@ -8,7 +8,7 @@ public class IdentifierService implements Identifier{
     private final String identifier;
 
     public IdentifierService(String identifier) {
-        if(identifier == null || identifier.isEmpty() || identifier.isBlank()) {
+        if(identifier == null || identifier.isEmpty()) {
             throw new InvalidParameterException("Necessario informar o identificador do assento");
         }
 

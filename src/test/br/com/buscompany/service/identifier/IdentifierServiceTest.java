@@ -1,4 +1,4 @@
-package test.service.identifier;
+package test.br.com.buscompany.service.identifier;
 
 import main.br.com.buscompany.service.identifier.Identifier;
 import main.br.com.buscompany.service.identifier.IdentifierService;
