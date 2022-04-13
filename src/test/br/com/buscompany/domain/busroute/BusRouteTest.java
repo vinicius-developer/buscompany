@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 public class BusRouteTest {
 
-    private BusRoute busRoute = new BusRoute();
+    private final BusRoute busRoute = new BusRoute();
 
     private BusStop busStop1;
 
@@ -79,6 +79,19 @@ public class BusRouteTest {
         String message = "A parada de onibus nao pode ser igual a null";
 
         assertEquals(message, invalidParameterException.getMessage());
+
+    }
+
+    @Test
+    public void addExistentBusStopInRoute() {
+
+        InvalidParameterException invalidParameterException = assertThrows(InvalidParameterException.class, () -> {
+            this.busRoute.addStop(this.busStop1);
+        });
+
+       String message = "Parada ja existe nessa rota";
+
+       assertEquals(message, invalidParameterException.getMessage());
 
     }
 
