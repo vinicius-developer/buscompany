@@ -1,4 +1,4 @@
-package main.br.com.buscompany.domain.bus;
+package main.br.com.buscompany.domain.trip.bus;
 
 import main.br.com.buscompany.domain.ticket.Ticket;
 import main.br.com.buscompany.service.identifier.Identifier;
@@ -11,23 +11,25 @@ public class Seat {
 
     private final Identifier identifierService;
 
-    private Ticket ticket;
+    private String ticketIdentifier;
 
     public Seat(String identifier) {
+
         this.identifierService = new IdentifierService(identifier);
+
     }
 
-    public Seat(String identifier, Ticket ticket) {
+    public Seat(String identifier, String ticketIdentifier) {
         this.identifierService = new IdentifierService(identifier);
-        this.setTicket(ticket);
+        this.setTicket(ticketIdentifier);
     }
 
-    private void setTicket(Ticket ticket) {
-        if(ticket == null) {
+    private void setTicket(String ticketIdentifier) {
+        if(ticketIdentifier == null) {
             throw new InvalidParameterException("Necessario informar um ticket valido");
         }
 
-        this.ticket = ticket;
+        this.ticketIdentifier = ticketIdentifier;
     }
 
     public String identifier() {
@@ -35,12 +37,17 @@ public class Seat {
     }
 
     public boolean occupied() {
-        return this.ticket != null;
+        return this.ticketIdentifier != null;
     }
 
-    public void toOccupy(Ticket ticket) {
-        this.setTicket(ticket);
+    public void toOccupy(String ticketIdentifier) {
+        this.setTicket(ticketIdentifier);
     }
+
+    public String ticketIdentifier() {
+        return this.ticketIdentifier;
+    }
+
 
     @Override
     public boolean equals(Object o) {

@@ -1,7 +1,7 @@
 package test.br.com.buscompany.domain.bus;
 
-import main.br.com.buscompany.domain.bus.Bus;
-import main.br.com.buscompany.domain.bus.Seat;
+import main.br.com.buscompany.domain.trip.bus.Bus;
+import main.br.com.buscompany.domain.trip.bus.Seat;
 import main.br.com.buscompany.domain.ticket.Ticket;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,7 +21,7 @@ class BusTest {
     void setUp() {
 
         Seat seat1 = new Seat("123");
-        Seat seat2 = new Seat("321",  new Ticket("432"));
+        Seat seat2 = new Seat("321",  "432");
         Seat seat3 = new Seat("2212");
 
         this.seats.add(seat1);
@@ -35,11 +35,11 @@ class BusTest {
     @Test
     public void getListOfOccupiedSeats() {
 
-        List<String> allUnOccupiedSeats = this.bus.getAllUnOccupiedSeats();
+        List<Seat> allUnOccupiedSeats = this.bus.getAllUnOccupiedSeats();
 
-        List<String> list = List.of(
-                this.seats.get(0).identifier(),
-                this.seats.get(2).identifier()
+        List<Seat> list = List.of(
+                this.seats.get(0),
+                this.seats.get(2)
         );
 
         assertEquals(allUnOccupiedSeats, list);
@@ -50,7 +50,7 @@ class BusTest {
     public void getErrorOfInvalidSeatToOccupy() {
 
         Exception errorInvalidSeat = assertThrows(InvalidParameterException.class, () -> {
-            this.bus.toOccupy("AAAA", new Ticket("ASDADASD"));
+            this.bus.toOccupy("AAAA", "ASDADASD");
         });
 
         String message = "Esse assento nao esta presente nesse onibus";
@@ -63,7 +63,7 @@ class BusTest {
     public void getErrorSeatIsOccupied() {
 
         Exception errorOccupiedSeat = assertThrows(InvalidParameterException.class, () -> {
-            this.bus.toOccupy("321", new Ticket("ASDADASD"));
+            this.bus.toOccupy("321", "ASDADASD");
         });
 
         String message = "Esse assento ja esta ocupado";

@@ -1,4 +1,4 @@
-package main.br.com.buscompany.domain.busroute;
+package main.br.com.buscompany.domain.trip.route;
 
 import main.br.com.buscompany.service.date.DateFormater;
 import main.br.com.buscompany.service.date.TimeStampDateFormatterService;
@@ -6,7 +6,7 @@ import main.br.com.buscompany.service.date.TimeStampDateFormatterService;
 import java.security.InvalidParameterException;
 import java.util.Objects;
 
-public class BusStop {
+public class Stop {
 
     private final String placeName;
 
@@ -14,7 +14,7 @@ public class BusStop {
 
     private final DateFormater departureDate;
 
-    public BusStop(String placeName, String arrivalDate, String departureDate) {
+    public Stop(String placeName, String arrivalDate, String departureDate) {
         if(placeName == null || arrivalDate == null || departureDate == null ) {
             throw new InvalidParameterException("Parada não pode ter argumentos nulos");
         }
@@ -43,7 +43,7 @@ public class BusStop {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        BusStop busStop = (BusStop) o;
+        Stop busStop = (Stop) o;
         return Objects.equals(placeName, busStop.placeName);
     }
 

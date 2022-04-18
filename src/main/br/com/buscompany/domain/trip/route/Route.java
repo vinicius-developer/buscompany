@@ -1,18 +1,18 @@
-package main.br.com.buscompany.domain.busroute;
+package main.br.com.buscompany.domain.trip.route;
 
 import java.security.InvalidParameterException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class BusRoute {
+public class Route {
 
-    private List<BusStop> route = new LinkedList<>();
+    private final List<Stop> route = new LinkedList<>();
 
     private Integer lastBusStop = 0;
 
     private Integer nextBusStop = 0;
 
-    public void addStop(BusStop busStop) {
+    public void addStop(Stop busStop) {
         this.verifyBusStopIsNotNull(busStop);
 
         this.verifyIfStopExistInRoute(busStop);
@@ -20,21 +20,21 @@ public class BusRoute {
         this.route.add(busStop);
     }
 
-    private void verifyIfStopExistInRoute(BusStop busStop) {
-        for (BusStop currentBusStop: this.route) {
+    private void verifyIfStopExistInRoute(Stop busStop) {
+        for (Stop currentBusStop: this.route) {
             if(currentBusStop.equals(busStop)) {
                 throw new InvalidParameterException("Parada ja existe nessa rota");
             }
         }
     }
 
-    private void verifyBusStopIsNotNull(BusStop busStop) {
+    private void verifyBusStopIsNotNull(Stop busStop) {
         if(busStop == null) {
             throw new InvalidParameterException("A parada de onibus nao pode ser igual a null");
         }
     }
 
-    public List<BusStop> showRoute() {
+    public List<Stop> showRoute() {
         return this.route;
     }
 

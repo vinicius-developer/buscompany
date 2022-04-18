@@ -1,4 +1,4 @@
-package main.br.com.buscompany.domain.bus;
+package main.br.com.buscompany.domain.trip.bus;
 
 import main.br.com.buscompany.domain.ticket.Ticket;
 import main.br.com.buscompany.service.identifier.Identifier;
@@ -7,6 +7,7 @@ import main.br.com.buscompany.service.identifier.IdentifierService;
 import java.security.InvalidParameterException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Bus {
 
@@ -19,19 +20,24 @@ public class Bus {
         this.seats = seats;
     }
 
-    public List<String> getAllUnOccupiedSeats() {
-        List<String> unOccupiedIdentifierSeats = new LinkedList<String>();
+    public List<Seat> getAllUnOccupiedSeats() {
 
-        this.seats.forEach(seat -> {
-            if(!seat.occupied()) {
-                unOccupiedIdentifierSeats.add(seat.identifier());
-            }
-        });
+        return this.seats
+                .stream()
+                .filter(seat -> !seat.occupied())
+                .collect(Collectors.toList());
 
-        return unOccupiedIdentifierSeats;
     }
 
-    public void toOccupy(String seatIdentifier, Ticket ticket) {
+    public List<Seat> getAllOccupiedSeats() {
+
+        return this.seats
+                .stream()
+                .filter(Seat::occupied)
+                .collect(Collectors.toList());
+    }
+
+    public void toOccupy(String seatIdentifier, String ticket) {
         Seat chosenSeat = this.getSpecificSeat(seatIdentifier);
 
         if(chosenSeat.occupied()) {

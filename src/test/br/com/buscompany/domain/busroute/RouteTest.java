@@ -1,7 +1,7 @@
 package test.br.com.buscompany.domain.busroute;
 
-import main.br.com.buscompany.domain.busroute.BusRoute;
-import main.br.com.buscompany.domain.busroute.BusStop;
+import main.br.com.buscompany.domain.trip.route.Route;
+import main.br.com.buscompany.domain.trip.route.Stop;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -11,40 +11,40 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-public class BusRouteTest {
+public class RouteTest {
 
-    private final BusRoute busRoute = new BusRoute();
+    private final Route busRoute = new Route();
 
-    private BusStop busStop1;
+    private Stop busStop1;
 
-    private BusStop busStop2;
+    private Stop busStop2;
 
-    private BusStop busStop3;
+    private Stop busStop3;
 
-    private BusStop busStop4;
+    private Stop busStop4;
 
     @Before
     public void setUp() throws Exception {
 
-        this.busStop1 = new BusStop(
+        this.busStop1 = new Stop(
                 "Parada1",
                 "2022-04-12 08:00:00",
                 "2022-04-12 08:30:00"
         );
 
-        this.busStop2 = new BusStop(
+        this.busStop2 = new Stop(
                 "Parada2",
                 "2022-04-12 08:00:00",
                 "2022-04-12 08:30:00"
         );
 
-        this.busStop3 = new BusStop(
+        this.busStop3 = new Stop(
                 "Parada3",
                 "2022-04-12 08:00:00",
                 "2022-04-12 09:30:00"
         );
 
-        this.busStop4 = new BusStop(
+        this.busStop4 = new Stop(
                 "Parada4",
                 "2022-04-12 08:00:00",
                 "2022-04-12 11:00:00"

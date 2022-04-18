@@ -1,6 +1,6 @@
 package test.br.com.buscompany.domain.bus;
 
-import main.br.com.buscompany.domain.bus.Seat;
+import main.br.com.buscompany.domain.trip.bus.Seat;
 import main.br.com.buscompany.domain.ticket.Ticket;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ class SeatTest {
 
     @Test
     public void createSeatWithTicket() {
-        Seat seat = new Seat("1234123", new Ticket("123123"));
+        Seat seat = new Seat("1234123", "123123");
 
         assertTrue(seat.occupied());
     }
@@ -27,7 +27,7 @@ class SeatTest {
     public void insertTicketAfterCreationOfSeat() {
         Seat seat = new Seat("123123");
 
-        seat.toOccupy(new Ticket("123"));
+        seat.toOccupy("123");
 
         assertTrue(seat.occupied());
     }

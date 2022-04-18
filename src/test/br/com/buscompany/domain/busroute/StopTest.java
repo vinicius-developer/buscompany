@@ -1,6 +1,6 @@
 package br.com.buscompany.domain.busroute;
 
-import main.br.com.buscompany.domain.busroute.BusStop;
+import main.br.com.buscompany.domain.trip.route.Stop;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,14 +9,14 @@ import java.security.InvalidParameterException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class BusStopTest {
+public class StopTest {
 
-    private BusStop busStop;
+    private Stop busStop;
 
     @Before
     public void setUp() throws Exception {
 
-        this.busStop = new BusStop(
+        this.busStop = new Stop(
                 "Lugar de Teste",
                 "2022-04-12 08:00:00",
                 "2022-04-12 08:30:00"
@@ -51,7 +51,7 @@ public class BusStopTest {
 
         InvalidParameterException invalidParameterException = assertThrows(
                 InvalidParameterException.class,
-                () -> new BusStop(null, null, null)
+                () -> new Stop(null, null, null)
         );
 
         String message = "Parada não pode ter argumentos nulos";
