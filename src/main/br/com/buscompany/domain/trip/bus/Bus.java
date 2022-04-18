@@ -1,11 +1,9 @@
 package br.com.buscompany.domain.trip.bus;
 
-import br.com.buscompany.domain.ticket.Ticket;
 import br.com.buscompany.service.identifier.Identifier;
 import br.com.buscompany.service.identifier.IdentifierService;
 
 import java.security.InvalidParameterException;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
