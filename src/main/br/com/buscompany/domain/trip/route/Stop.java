@@ -1,7 +1,7 @@
-package main.br.com.buscompany.domain.trip.route;
+package br.com.buscompany.domain.trip.route;
 
-import main.br.com.buscompany.service.date.DateFormater;
-import main.br.com.buscompany.service.date.TimeStampDateFormatterService;
+import br.com.buscompany.service.date.DateFormater;
+import br.com.buscompany.service.date.TimeStampDateFormatterService;
 
 import java.security.InvalidParameterException;
 import java.util.Objects;

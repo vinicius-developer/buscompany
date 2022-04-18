@@ -1,7 +1,7 @@
 package test.br.com.buscompany.service.date;
 
-import main.br.com.buscompany.service.date.DateFormater;
-import main.br.com.buscompany.service.date.TimeStampDateFormatterService;
+import br.com.buscompany.service.date.DateFormater;
+import br.com.buscompany.service.date.TimeStampDateFormatterService;
 import org.junit.Test;
 
 import java.security.InvalidParameterException;

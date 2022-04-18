@@ -1,6 +1,6 @@
 package br.com.buscompany.domain.busroute;
 
-import main.br.com.buscompany.domain.trip.route.Stop;
+import br.com.buscompany.domain.trip.route.Stop;
 import org.junit.Before;
 import org.junit.Test;
 

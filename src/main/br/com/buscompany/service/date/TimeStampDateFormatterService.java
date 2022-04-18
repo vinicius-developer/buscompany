@@ -1,4 +1,4 @@
-package main.br.com.buscompany.service.date;
+package br.com.buscompany.service.date;
 
 import java.security.InvalidParameterException;
 import java.sql.Timestamp;

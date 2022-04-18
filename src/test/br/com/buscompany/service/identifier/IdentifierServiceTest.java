@@ -1,7 +1,7 @@
 package test.br.com.buscompany.service.identifier;
 
-import main.br.com.buscompany.service.identifier.Identifier;
-import main.br.com.buscompany.service.identifier.IdentifierService;
+import br.com.buscompany.service.identifier.Identifier;
+import br.com.buscompany.service.identifier.IdentifierService;
 import org.junit.jupiter.api.Test;
 
 import java.security.InvalidParameterException;

@@ -1,4 +1,4 @@
-package main.br.com.buscompany.service.date;
+package br.com.buscompany.service.date;
 
 public interface DateFormater {
 

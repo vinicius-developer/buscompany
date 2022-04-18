@@ -1,7 +1,7 @@
 package test.br.com.buscompany.domain.bus;
 
-import main.br.com.buscompany.domain.trip.bus.Seat;
-import main.br.com.buscompany.domain.ticket.Ticket;
+import br.com.buscompany.domain.trip.bus.Seat;
+import br.com.buscompany.domain.ticket.Ticket;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

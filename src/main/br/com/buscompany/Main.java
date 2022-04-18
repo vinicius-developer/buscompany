@@ -1,4 +1,4 @@
-package main.br.com.buscompany;
+package br.com.buscompany;
 
 public class Main {
 

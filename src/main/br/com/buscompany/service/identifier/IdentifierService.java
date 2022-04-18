@@ -1,4 +1,4 @@
-package main.br.com.buscompany.service.identifier;
+package br.com.buscompany.service.identifier;
 
 import java.security.InvalidParameterException;
 import java.util.Objects;

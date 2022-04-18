@@ -1,6 +1,6 @@
-package main.br.com.buscompany.domain.trip;
+package br.com.buscompany.domain.trip;
 
-import main.br.com.buscompany.domain.trip.bus.Seat;
+import br.com.buscompany.domain.trip.bus.Seat;
 
 import java.util.List;
 import java.util.stream.Collectors;

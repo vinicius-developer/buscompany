@@ -1,7 +1,7 @@
-package main.br.com.buscompany.domain.ticket;
+package br.com.buscompany.domain.ticket;
 
-import main.br.com.buscompany.service.identifier.Identifier;
-import main.br.com.buscompany.service.identifier.IdentifierService;
+import br.com.buscompany.service.identifier.Identifier;
+import br.com.buscompany.service.identifier.IdentifierService;
 
 public class Ticket {
 

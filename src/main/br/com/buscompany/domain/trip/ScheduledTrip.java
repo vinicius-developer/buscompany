@@ -1,7 +1,7 @@
-package main.br.com.buscompany.domain.trip;
+package br.com.buscompany.domain.trip;
 
-import main.br.com.buscompany.domain.trip.bus.Bus;
-import main.br.com.buscompany.domain.trip.route.Route;
+import br.com.buscompany.domain.trip.bus.Bus;
+import br.com.buscompany.domain.trip.route.Route;
 
 public class ScheduledTrip {
 

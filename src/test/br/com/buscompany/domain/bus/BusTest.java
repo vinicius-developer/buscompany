@@ -1,8 +1,8 @@
 package test.br.com.buscompany.domain.bus;
 
-import main.br.com.buscompany.domain.trip.bus.Bus;
-import main.br.com.buscompany.domain.trip.bus.Seat;
-import main.br.com.buscompany.domain.ticket.Ticket;
+import br.com.buscompany.domain.trip.bus.Bus;
+import br.com.buscompany.domain.trip.bus.Seat;
+import br.com.buscompany.domain.ticket.Ticket;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

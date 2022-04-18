@@ -1,8 +1,8 @@
-package main.br.com.buscompany.domain.trip.bus;
+package br.com.buscompany.domain.trip.bus;
 
-import main.br.com.buscompany.domain.ticket.Ticket;
-import main.br.com.buscompany.service.identifier.Identifier;
-import main.br.com.buscompany.service.identifier.IdentifierService;
+import br.com.buscompany.domain.ticket.Ticket;
+import br.com.buscompany.service.identifier.Identifier;
+import br.com.buscompany.service.identifier.IdentifierService;
 
 import java.security.InvalidParameterException;
 import java.util.LinkedList;

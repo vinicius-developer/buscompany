@@ -1,4 +1,4 @@
-package main.br.com.buscompany.domain.trip.route;
+package br.com.buscompany.domain.trip.route;
 
 import java.security.InvalidParameterException;
 import java.util.LinkedList;
