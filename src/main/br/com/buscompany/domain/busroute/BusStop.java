@@ -3,21 +3,29 @@ package main.br.com.buscompany.domain.busroute;
 import main.br.com.buscompany.service.date.DateFormater;
 import main.br.com.buscompany.service.date.TimeStampDateFormatterService;
 
+import java.security.InvalidParameterException;
 import java.util.Objects;
 
 public class BusStop {
 
-    private String placeName;
+    private final String placeName;
 
-    private DateFormater arrivalDate;
+    private final DateFormater arrivalDate;
 
-    private DateFormater departureDate;
+    private final DateFormater departureDate;
 
     public BusStop(String placeName, String arrivalDate, String departureDate) {
+        if(placeName == null || arrivalDate == null || departureDate == null ) {
+            throw new InvalidParameterException("Parada não pode ter argumentos nulos");
+        }
+
         this.placeName = placeName;
         this.arrivalDate = new TimeStampDateFormatterService(arrivalDate);
         this.departureDate = new TimeStampDateFormatterService(departureDate);
     }
+
+
+
 
     public String arrivalDate() {
         return this.arrivalDate.getDate();
