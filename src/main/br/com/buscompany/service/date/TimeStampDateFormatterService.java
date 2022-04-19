@@ -6,7 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class TimeStampDateFormatterService implements DateFormater {
+public class TimeStampDateFormatterService implements DateFormatter {
 
     private final String TIME_STAMP_DEFAULT = "yyyy-MM-dd HH:mm:ss";
 

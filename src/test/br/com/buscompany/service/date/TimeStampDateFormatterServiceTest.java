@@ -1,7 +1,5 @@
 package br.com.buscompany.service.date;
 
-import br.com.buscompany.service.date.DateFormater;
-import br.com.buscompany.service.date.TimeStampDateFormatterService;
 import org.junit.Test;
 
 import java.security.InvalidParameterException;
@@ -28,7 +26,7 @@ public class TimeStampDateFormatterServiceTest {
         
         String date = "2002-02-25 10:30:25";
 
-        DateFormater time = new TimeStampDateFormatterService(date);
+        DateFormatter time = new TimeStampDateFormatterService(date);
 
         assertEquals(date, time.getDate());
         

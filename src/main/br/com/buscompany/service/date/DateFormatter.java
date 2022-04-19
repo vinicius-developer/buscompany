@@ -1,6 +1,6 @@
 package br.com.buscompany.service.date;
 
-public interface DateFormater {
+public interface DateFormatter {
 
     String getDate();
 

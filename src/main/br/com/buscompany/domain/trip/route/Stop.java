@@ -1,6 +1,6 @@
 package br.com.buscompany.domain.trip.route;
 
-import br.com.buscompany.service.date.DateFormater;
+import br.com.buscompany.service.date.DateFormatter;
 import br.com.buscompany.service.date.TimeStampDateFormatterService;
 
 import java.security.InvalidParameterException;
@@ -10,9 +10,9 @@ public class Stop {
 
     private final String placeName;
 
-    private final DateFormater arrivalDate;
+    private final DateFormatter arrivalDate;
 
-    private final DateFormater departureDate;
+    private final DateFormatter departureDate;
 
     public Stop(String placeName, String arrivalDate, String departureDate) {
         if(placeName == null || arrivalDate == null || departureDate == null ) {
