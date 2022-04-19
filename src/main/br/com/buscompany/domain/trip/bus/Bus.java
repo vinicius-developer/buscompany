@@ -28,7 +28,6 @@ public class Bus {
     }
 
     public List<Seat> getAllOccupiedSeats() {
-
         return this.seats
                 .stream()
                 .filter(Seat::occupied)

@@ -1,7 +1,6 @@
-package test.br.com.buscompany.domain.bus;
+package br.com.buscompany.domain.bus;
 
 import br.com.buscompany.domain.trip.bus.Seat;
-import br.com.buscompany.domain.ticket.Ticket;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

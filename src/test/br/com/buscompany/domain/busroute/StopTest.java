@@ -38,7 +38,6 @@ public class StopTest {
 
     }
 
-
     @Test
     public void getDepartureDate() {
 
@@ -59,7 +58,5 @@ public class StopTest {
         assertEquals(invalidParameterException.getMessage(), message);
 
     }
-
-
 
 }

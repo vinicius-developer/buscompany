@@ -1,10 +1,9 @@
-package test.br.com.buscompany.domain.busroute;
+package br.com.buscompany.domain.busroute;
 
 import br.com.buscompany.domain.trip.route.Route;
 import br.com.buscompany.domain.trip.route.Stop;
 import org.junit.Before;
 import org.junit.Test;
-
 
 import java.security.InvalidParameterException;
 import java.util.List;

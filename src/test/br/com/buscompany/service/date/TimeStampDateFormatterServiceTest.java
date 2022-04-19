@@ -1,4 +1,4 @@
-package test.br.com.buscompany.service.date;
+package br.com.buscompany.service.date;
 
 import br.com.buscompany.service.date.DateFormater;
 import br.com.buscompany.service.date.TimeStampDateFormatterService;
